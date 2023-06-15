@@ -31,10 +31,10 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
 
         cors.addMapping(config.getBasePath() + "/**").allowedOrigins(allowedOrrigins);
 
-        disableHtppMethods(Crew.class,config,unSupportedMethods);
+        disableHttpMethods(Crew.class,config,unSupportedMethods);
     }
 
-    private void disableHtppMethods(Class theClass, RepositoryRestConfiguration config, HttpMethod[] unSupportedMethods){
+    private void disableHttpMethods(Class theClass, RepositoryRestConfiguration config, HttpMethod[] unSupportedMethods){
 
         config.getExposureConfiguration().forDomainType(Crew.class)
                 .withItemExposure(((metdata, httpMethods) ->
