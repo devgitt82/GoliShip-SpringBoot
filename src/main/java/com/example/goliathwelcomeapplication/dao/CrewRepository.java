@@ -12,5 +12,9 @@ public interface CrewRepository extends JpaRepository<Crew, Long> {
 
     Page<Crew> findByRankContaining(@RequestParam("rank") String rank, Pageable pageable);
 
+    Page<Crew> findByNameContaining(@RequestParam("name") String name, Pageable pageable);
+
+    Page<Crew> findByNameContainingOrRankContaining(@RequestParam("name") String name, @RequestParam("rank") String rank, Pageable pageable);
+
     Page<Crew> findByDepartment(@RequestParam("department") String department, Pageable pageable);
 }
