@@ -1,5 +1,6 @@
 package com.example.goliathwelcomeapplication.config;
 
+import com.example.goliathwelcomeapplication.entity.Comment;
 import com.example.goliathwelcomeapplication.entity.Crew;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
@@ -28,10 +29,12 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
 
 
         config.exposeIdsFor(Crew.class);
+        config.exposeIdsFor(Comment.class);
 
         cors.addMapping(config.getBasePath() + "/**").allowedOrigins(allowedOrrigins);
 
         disableHttpMethods(Crew.class,config,unSupportedMethods);
+        disableHttpMethods(Comment.class,config,unSupportedMethods);
     }
 
     private void disableHttpMethods(Class theClass, RepositoryRestConfiguration config, HttpMethod[] unSupportedMethods){
