@@ -10,4 +10,6 @@ public interface CommentRepository extends JpaRepository<Comment, Long> {
 
     Page<Comment> findByCrewId(@RequestParam("crew_id") Long crewId, Pageable pageable);
 
+    Comment findByUserEmailAndCrewId(String userEmail, Long crewId);
+
 }

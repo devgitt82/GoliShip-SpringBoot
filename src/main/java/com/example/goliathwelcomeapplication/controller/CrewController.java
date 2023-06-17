@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @Data
+@CrossOrigin("http://localhost:3000")
 @RestController
 @RequestMapping(path="/api/crew/secure")
 public class CrewController {
@@ -17,16 +18,6 @@ public class CrewController {
     @Autowired
     public CrewController(CrewService crewService){this.crewService = crewService;}
 
-    @PostMapping("/add")
-    public void postCrew(@RequestHeader(value="Authorization") String token,
-                         @RequestBody AddCrewRequest addCrewRequest) throws Exception {
 
-        //TODO
-        //JWT extraction to be included here - if statement to be corrected
-         if (1 == 0){
-            throw new Exception("Admin access required");
-        }
-        crewService.postCrew(addCrewRequest);
-    }
 
 }
