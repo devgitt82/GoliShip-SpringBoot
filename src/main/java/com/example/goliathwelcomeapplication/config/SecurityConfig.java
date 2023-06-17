@@ -27,7 +27,9 @@ public class SecurityConfig {
 
         http
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("api/crew/secure/**", "api/comments/secure/**").authenticated()
+                        .requestMatchers("api/crew/secure/**",
+                                                  "api/comments/secure/**",
+                                                  "api/messages/secure/**").authenticated()
                         .requestMatchers("api/**").permitAll());
         http
                 .oauth2ResourceServer(httpSecurityOAuth2ResourceServerConfigurer ->
