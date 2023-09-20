@@ -37,7 +37,7 @@ public class SecurityConfig {
                         httpSecurityOAuth2ResourceServerConfigurer
                                 .jwt(jwtConfigurer ->
                                         jwtConfigurer
-                                                .jwkSetUri("https://dev-70719039.okta.com/oauth2/default/v1/keys")));
+                                                .jwkSetUri("https://dev-88243632.okta.com/oauth2/default/v1/keys")));
 
         Okta.configureResourceServer401ResponseBody(http);
 
