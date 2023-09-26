@@ -11,5 +11,5 @@ Simple welcome on board app prepared as a support to safety induction for new jo
 **Installation:**
 
 1. Clone repo to your local host.
-2. Modify [application-properties}(/src/main/resources/) file with your database server details
+2. Modify [application-properties](/src/main/resources/) file with your database server details
 
