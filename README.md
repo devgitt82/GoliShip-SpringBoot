@@ -4,7 +4,7 @@ Simple welcome on board app prepared as a support to safety induction for new jo
 
 **Requirements**
 - Running database server with imported [SQL](https://github.com/devgitt82/GoliShip-SQL) script database dump file.
-- Running GoliShip [React client]() or ~~Angular(in development) client~~for extended access.
+- Running GoliShip [React client]() or ~~Angular(in development) client~~ for extended access.
 - Java 17
 - Internet connection for `OKTA` keys verification
 
